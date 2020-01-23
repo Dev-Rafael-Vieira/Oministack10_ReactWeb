@@ -1,0 +1,37 @@
+// criando o prjeto
+yarn create react-app web
+
+//componente,
+<App/>
+
+
+____________________________________
+//propriedade:
+
+>header.js
+export default Header(props){
+    return (
+        <h1>{props.title}</h1>
+    );
+}
+
+>index.js
+<Header title="Dashboard">
+
+______________________________________
+//estado, 
+import React, { useState } from 'react';
+function App(){
+    const [conter, setCouter] = useState(0);
+    function incrementCounter(){
+        setCouter(counter + 1);
+    }
+    return (
+        <>
+            <h1>Contador: {counter}</h1>
+            <button onClick={incrementCounter}>incrementar</button>
+        </>
+    );
+}
+export default App;
+_______________________________________
